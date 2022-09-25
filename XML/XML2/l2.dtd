@@ -1,0 +1,14 @@
+<!DOCTYPE faculty [
+<!ELEMENT faculty (uni)>
+<!ELEMENT uni (name,years,ct,ball,plan,city)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT years (#PCDATA)>
+<!ELEMENT ct (#PCDATA)>
+<!ELEMENT bal (#PCDATA)>
+<!ELEMENT plan (#PCDATA)>
+<!ELEMENT city (#PCDATA)>
+]>
+
+
+
+

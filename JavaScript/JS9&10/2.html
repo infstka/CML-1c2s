@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+  <img id="square" src="1.jpg" style="width:200px;height: 200px; position:relative;"> <!-- присоед изображения -->
+  <script>
+    function move() {
+      let start = Date.now(); //начало функции
+      let timer = setInterval(function () { //вып-е кода до остановки clear interval
+        let timePassed = Date.now() - start;
+        square.style.left = timePassed / 5 + 'px'; //удаление объекта вправо
+        if (timePassed > 8000) clearInterval(timer);//движение до 8000 пикс после чего возвр в исх сост
+      }, 20);
+    }
+    move();
+  </script>
+</body>
+</html>

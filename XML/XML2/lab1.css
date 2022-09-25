@@ -1,0 +1,51 @@
+uni {
+    display: block;
+    text-align: center;
+    margin: 10px 20px 10px 20px;
+    margin-top: 12pt;
+    border-style: double;
+    border-color: red;
+    font-size: 15pt;
+}
+
+name {
+    font-style: italic;
+    text-align: center;
+    font-weight: bold;
+}
+
+years {
+    display: block;
+    text-align: center;
+    border: 3px solid red;
+}
+ct {
+    display: block;
+    text-align: center;
+    border: 3px solid red;
+}
+
+ball {
+    display: block;
+    text-align: center;
+    border: 3px solid red;
+}
+
+plan {
+    display: block;
+    text-align: center;
+    border: 3px solid red;
+}
+
+city {
+    display: block;
+    text-align: center;
+    border: 3px solid red;
+}
+
+faculty {
+    display: block;
+    margin: 25px 50px;
+    border-style: solid;
+    border: 3px solid red;
+}

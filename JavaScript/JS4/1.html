@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	function Gruppa(num,spec,amount)
+{
+	this.num=num;
+	this.spec=spec;
+	this.amount=amount;
+	this.addStud= function addStud(am)
+	{
+		this.amount+=am;
+		document.write(  "В группу " + num + " добавили " + am + " студентов." + "</br >");
+	}
+	this.subStud=function subStud(am)
+	{
+		this.amount-=am;
+		document.write("Из группы " + num + " отчислили "+ am + " студентов." + "</br >");
+	}
+	this.outStud=function outStud(num)
+	{
+		document.write( 'В ' + num + ' группе ' + amount + ' студентов.' + '<br>');
+	}
+}
+gr1= new Gruppa(3,'ИСиТ',28);
+gr1.addStud(3);
+gr1.subStud(2);
+gr1.outStud(3);
+gr2=new Gruppa(8,'ПОИБМС',28);
+gr2.subStud(3);
+gr2.addStud(2);
+gr2.outStud(8);
+gr3=new Gruppa(11,'ДЭиВИ',17);
+gr3.addStud(5);
+gr3.subStud(4);
+gr3.outStud(11);
+document.write('<br>'+'<br>');
+	//2 zadanie
+	function Student(name,surname,physics,math,it,years)
+{
+	this.name=name;
+	this.surname=surname;
+	this.physics=physics;
+	this.math=math;
+	this.it=it;
+	this.years=years;
+	this.average=function average(math,physics,it)
+	{
+		document.write('Средний балл по 3 предметам: ' + (this.math + this.physics + this.it)/3 + '<br>');
+	}
+	this.namefunc=function namefunc(name,surname)
+	{
+		document.write('Имя и фамилия студента : '+ this.name + ' ' + this.surname + '<br>');
+	}
+	this.studYear=function studYear(years)
+	{
+		document.write('Год обучения студента : '+ years + '<br>');
+	}
+	this.sv=function sv(svol){
+		document.write(svol);
+	}
+}
+student1=new Student('Студент','1',4,6,8,1,"dsada");
+student1.namefunc();
+student1.average();
+student1.studYear(1);
+student2=new Student('Студент','2',2,5,5,1,"dsa");
+student2.namefunc();
+student2.average();
+student2.studYear(1);
+student3= new Student('Студент','3',7,6,5,1,"qwe");
+student3.namefunc();
+student3.average();
+student3.studYear(1);
+Student.prototype.svol=this.svol;
+student3.sv();
+//3 zadanie
+document.write('<br>');
+var arr=new Array();
+ arr[0]='0 ';
+ arr[1]='1 ';
+ arr[2]='2 ';
+ arr[3]='3 ';
+ arr[4]='4 ';
+document.write("</br >"+" Исходный массив : "+arr[0], arr[1], arr[2], arr[3], arr[4]);
+delete arr[3];
+document.write("</br >"+"Полученный массив : "+arr[0], arr[1], arr[2], arr[3], arr[4]);
+let res= 2 in arr;
+document.write("</br >"+"Наличие в массиве элемента с номером 2 : "+res);
+res= 'name' in Student;
+document.write("</br >"+"Наличие свойтсва name  у объекта Student : "+res);
+res = arr instanceof Array;
+document.write("</br >"+"Является ли arr объектом Array : "+res);
+res= Student instanceof Object;
+document.write("</br >"+"Является ли Student объектом Object :"+res);
+str = new String ("Три параллелепипеда");
+res= str instanceof String;
+document.write("</br >"+"Является ли str объектом String : "+res + '<br>');
+function task3()
+{
+	return 5;
+}
+document.write("тип str :"+ typeof str + '<br>');
+document.write("тип arr :" + typeof arr + '<br>');
+document.write("тип Student :"+ typeof Student + '<br>');
+document.write("тип Gruppa :" + typeof Gruppa + '<br>');
+document.write("Тип task3() :"+ typeof task3() + '<br>');
+</script>
+</body>
+</html>

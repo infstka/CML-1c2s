@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<body>
+<b>Задание 1,2:</b> 
+<br/>Смена цвета <span id="1">слова</span> и смена размера шрифта <span id="2">слова</span><br/>
+<b>Задание 3:</b>
+<br><img src="1.jpg" id="img_1" onClick="chg(this.id,'check')"><br>
+<b>Задание 4:</b>
+<br/><span id="4">При нажатии этот текст превратится в картинку</span><br>
+<br/><b>Задание 5:</b>
+<br/><img src="1.jpg"onmouseover="this.style.width = '100px'"
+onmouseout="this.style.width =''"><br/>
+<b>Задание 6:</b>
+<br/><div class="text">
+<p>Текст, при двойном нажатии на который вокруг него появится рамка</p>
+</div>
+<script>
+var word1 = document.getElementById('1')
+word1.onmouseover = function () {
+word1.style.color = "red";
+}
+var word2 = document.getElementById('2')
+word2.onclick = function () {
+    word2.style.fontSize = '30px';
+}
+function chg(id){
+var el = document.getElementById(id);
+if (el.src.indexOf("1.jpg")>0){
+el.src="2.jpg"
+}else{
+el="1.jpg"
+}
+}
+var textForChange = document.getElementById('4')
+textForChange.onclick = function () {
+textForChange.innerHTML = '<img src = "2.jpg">'
+}
+document.ondblclick = function (e) {
+    let target = e.target || window.event.srcElement;
+    if (target.tagName != 'P') return;
+    target.style.border = "dashed red";
+}
+</script>
+</body>
+</html>

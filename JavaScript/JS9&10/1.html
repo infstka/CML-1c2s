@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<body id = "mybody">
+    <img src="1.jpg" id="img" style = "position: absolute; top:10; left:10; width: 200px; height: 200px; margin:0px;"> <!-- подключение изображения и его стили -->
+    <textarea name="text" id="text" cols="30" rows="10" style="top: 200px; position: absolute;">область текста</textarea> <!-- подключение текст области и ее стили -->
+</body>
+<script>
+    let IMG = document.getElementById('img');
+    let TEXT = document.getElementById("text"); 
+//возвращение ссылок на эл-ы с указ id
+    TEXT.onmousedown = function(e){
+    //нажатие кнопки мыши на объекте
+        TEXT.style.position = 'absolute';
+        moveAt(e);
+        document.body.appendChild(TEXT);
+//помещение в конец 
+        function moveAt() {
+            TEXT.style.left = event.pageX - TEXT.offsetWidth / 2 + 'px'; 
+            TEXT.style.top = event.pageY - TEXT.offsetHeight / 2 + 'px';
+        };//расположение на странице
+
+        document.onmousemove = function() {
+            moveAt();
+        };
+//перемещение курсора мыши
+        TEXT.onmouseup = function() {
+            document.onmousemove = null;
+            TEXT.onmouseup = null;
+        };
+//при опускании кнопки мыши объект не перемещается 
+        TEXT.ondragstart = function() {
+            return false;
+        };
+    };
+//перетаскивание объекта
+    IMG.onmousedown = function(e) {
+        IMG.style.position = 'absolute';
+        moveAt(e);
+        document.body.appendChild(IMG);
+
+
+        function moveAt(e) {
+            IMG.style.left = e.pageX - IMG.offsetWidth / 2 + 'px';
+            IMG.style.top = e.pageY - IMG.offsetHeight / 2 + 'px';
+        };
+
+        document.onmousemove = function(e) {
+            moveAt(e);
+        };
+        
+        IMG.onmouseup = function() {
+            document.onmousemove = null;
+            IMG.onmouseup = null;
+        };
+
+        IMG.ondragstart = function() {
+            return false;
+        };
+    };
+</script>
+</html>
+

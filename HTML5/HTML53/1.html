@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            background-color: lightgray;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        input[type=button] {
+            width: 200px;
+            height: 50px;
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        #latitude {
+            padding-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        #longitude {
+            padding-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        footer {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        #forms {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+
+        #submit {
+            padding-left: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <header> <!-- заголовочный блок сайта -->
+        <h1>Я ,<mark>Бобрович Глеб Сергеевич</mark>, изучаю HTML5</h1>
+    </header>
+    <nav> <!-- навигационное меню -->
+        <div id="forms">
+            <div id="email">
+                ваш email:
+                <input type="email" name="email" placeholder="youremail@gmail.com" id="inputEmail"> <!-- поле, сод-ее email адрес -->
+            </div>
+            <br>
+            <div id="name">
+                ваше имя :
+                <input type="text" placeholder="Name" id="inputName">
+            </div>
+            <br>
+            <div id="phone">
+                ваш мобильный номер :
+                <input type="text" id="inputPhone" placeholder="+375-(xx)-xxx-xx-xx">
+            </div>
+            <br>
+            <div id="course">
+                ваш курс :
+                <input type="number" id="inputCourse" min="1" max="4"> <!-- поле, содержащее числа (минимальное - 1, максимальное - 4) -->
+            </div>
+            <br>
+            <div id="submit">
+                <input type="submit" value="Отправить" class="button" onclick="printInfo()">
+            </div>
+        </div>
+        <figure>
+            <img src="2.jpg" width="200px" height="250px">
+            <br>
+            <figurecaption>ваше фото</figurecaption> <!-- подпись к фотографии -->
+        </figure>
+    </nav>
+    <br>
+    <video width="300px" width="300px" controls="controls"> <!-- подключение видео -->
+        <source src="l1.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+    </video>
+    <br>
+    <audio controls> <!-- подключение аудио -->
+        <source src="%D0%96%D0%B4%D0%B8.wav" type="audio/mpeg">
+    </audio>
+    <br>
+    <input type="button" value="мое местоположение" onclick="geoposition()"> <!-- кнопка, позволяющая определить текущее местоположение -->
+    <div id="latitude">
+        ширина:
+    </div>
+    <br>
+    <div id="longitude">
+        долгота:
+    </div>
+    <br>
+    <footer> <!-- нижний колонтитул -->
+        <div id="emailInfo">e-mail: </div>
+        <div id="nameInfo">имя: </div>
+        <div id="phoneInfo">телефон: </div>
+        <div id="courseInfo">курс: </div>
+    </footer>
+    <script type="text/javascript" src="1.js"> //подключение js
+    </script>
+</body>
+</html>

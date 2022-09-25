@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="lab1.css"?>
+<faculty>
+    <uni>
+        <name>БГУ</name>
+        <years>4 года</years>
+        <ct>Русский/белорусский, математика, физика</ct>
+        <ball>Балл: 308</ball>
+        <plan>Количество мест: 30</plan>
+        <city>Минск</city>
+    </uni>
+
+    <uni>
+        <name>БНТУ</name>
+        <years>4 года</years>
+        <ct>Русский/белорусский, математика, физика</ct>
+        <ball>Балл: 319</ball>
+        <plan>Количество мест: 40</plan>
+        <city>Минск</city>
+    </uni>
+
+    <uni>
+        <name>БГУИР</name>
+        <years>4 года</years>
+        <ct>Русский/белорусский, математика, физика</ct>
+        <ball>Балл: 299</ball>
+        <plan>Количество мест: 35</plan>
+        <city>Минск</city>
+    </uni>
+</faculty>

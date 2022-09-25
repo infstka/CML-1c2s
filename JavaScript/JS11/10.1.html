@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="http://code.jquery.com/jquery-latest.js"></script> <!-- подключ функции jq -->
+    <style type="text/css"> 
+        #block {
+            position: absolute;
+            background-color: red;
+            left: 50px;
+            width: 90px;
+            height: 90px;
+            margin: 5px;
+            border-radius: 50%;
+        }
+        .step {
+            position: absolute;
+        }
+    </style>
+
+</head>
+<div id="block"> </div>
+<script>
+    $(document).ready(function () { //вып-е функции при загрузке dom
+        $("#block").animate({ //вып-е анимации объекта
+            "left": "1500px"
+        }, {
+            step: function (now, fx) {
+                $(fx.elem).offset({ //уст коорд отн страницы
+                    top: Math.sin(now / 100) * 100 + 300 //по оу
+                });
+                $(".step:last").offset({
+                    top: Math.sin(fx.now / 100) * 200 + 200,//по ох
+                    left: now
+                });
+            }
+        }, "slow");
+    });
+</script>
+</html>

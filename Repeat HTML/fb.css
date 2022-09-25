@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+}
+html, body, .all{   /*Документ во все окно*/
+    height: 100%;
+}
+.main_content{
+    display: flex;
+    flex-direction: row;
+    flex:1 0 auto;  /*grow shrink base*/
+}
+.all{
+    display: flex;
+    flex-direction: column;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+}
+.info{
+    display: inline-block;  /*чтобы float работал*/
+}
+.title{
+    text-align: center;
+    margin: 10px;
+}
+.picture{
+    margin: 10px;
+    float: left;
+}
+.header, .footer{
+    background-color: rgb(86, 202, 206);
+    color: darkblue;
+    text-align: center;
+    width: 100%;
+}
+.menu{
+    background-color: rgb(219, 217, 79);
+    font-size: 18px;
+    padding: 30px;
+}
+.text{
+    margin: 10px;
+    font-size: 18px;
+}
+
+@media screen and (max-width: 680px){
+    .main_content{      /*flexbox вывод в обратном порядке*/
+        flex-direction: column-reverse;
+    }
+    .menu{
+        padding-top:5px;
+        padding-bottom:5px;
+    }
+    .picture{   /*Убрали обтекание*/
+        float: none;
+    }
+    ul li{      /*список в строку */
+        display: inline;
+    }
+}
+
+
+

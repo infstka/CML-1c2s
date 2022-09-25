@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+body {
+background-color: lightgray;
+}
+h1 {
+text-align: center;
+}
+input[type=button] {
+width: 200px;
+height: 50px;
+font-size: 15px;
+font-weight: bold;
+}
+#latitude {
+padding-top: 20px;
+font-size: 20px;
+font-weight: bold;
+}
+#longitude {
+padding-top: 20px;
+font-size: 20px;
+font-weight: bold;
+}
+</style>
+</head>
+<body>
+<h1>Я, <mark>Бобрович Глеб Сергеевич</mark>, изучаю HTML5</h1> <!-- mark выделяет заключенный внутри него текст желтым цветом -->
+<video src="l1.mp4" width="300px" width="300px" controls="controls"></video><!-- подключаем видео и задаем дополнительно стили -->
+<br>
+<audio src="%D0%96%D0%B4%D0%B8.wav" controls="controls"></audio><!-- подключаем аудио и задаем дополнительно стили -->
+<br>
+<input type="button" value="мое местоположение" onclick="geoposition()"> <!-- кнопка, по нажатии на которую активируется функция для определния геопозиции -->
+<div id="latitude"> <!-- широта -->
+широта:
+</div>
+<br>
+<div id="longitude"><!-- долгота -->
+долгота:
+</div>
+<script type="text/javascript" src="l1.js"> // подключение js
+</script>
+</body>
+</html>

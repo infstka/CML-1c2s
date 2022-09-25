@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> <!--подключ jq-->
+    <script type="text/javascript" src="10.2.js"></script>
+</head>
+<body>
+    <form name='one' id='user'> 
+        <fieldset>
+            <legend>цвет графика</legend>
+            <select name='h' id="h">
+                <option value="Red">красный</option>
+                <option value="Blue">синий</option>
+                <option value="Green">хелёный</option>
+                <option value="Black">чёрный</option>
+            </select>
+            <br><br>
+            <input type='radio' name='s' value='y=x*x' /> x^2 <br>
+            <input type='radio' name='s' value='y=x*x*x' /> x^3 <br>
+            <input type='radio' name='s' value='y=Math.sin(x)' /> sin(x) <br>
+            <input type='radio' name='s' value='y=Math.cos(x)' /> cos(x) <br>
+            <canvas id='canvas' width=300 height=300></canvas><br /><br />
+            <input type='button' value=' нарисовать график функции' onclick='draw()' />
+        </fieldset>
+    </form>
+</body>
+</html>

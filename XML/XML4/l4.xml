@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="l4.xslt"?>
+<university>
+    <classmate>
+        <name>Имя1</name>
+        <surname>Фамилия1</surname>
+        <score>5.2</score>
+        <bdate>1 января</bdate>
+    </classmate>
+    
+         <classmate>
+        <name>Имя2</name>
+        <surname>Фамилия2</surname>
+        <score>8.9</score>
+        <bdate>28 июня</bdate>
+    </classmate>
+    
+    <classmate>
+        <name>Имя3</name>
+        <surname>Фамилия3</surname>
+        <score>3.6</score>
+        <bdate>9 августа</bdate>
+    </classmate>
+    
+    <classmate>
+        <name>Имя4</name>
+        <surname>Фамилия4</surname>
+        <score>7.8</score>
+        <bdate>10 мая</bdate>
+    </classmate>
+</university>

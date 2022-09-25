@@ -1,0 +1,61 @@
+<html>
+<head>
+    <meta utf-8 />
+    <script type="text/javascript">
+        function mixtureDate(){
+          var data = "";
+          var teams = "";
+          var counter_team = 0;
+          var form = document.getElementById('f1');  
+          var mas_input = form.getElementsByTagName("input");
+          for(i=0; i<mas_input.length; i++)
+          {
+            if(mas_input[i].type == 'text')
+                data += "Студент " + mas_input[i].value +"";
+            if (mas_input[i].type == 'checkbox' && mas_input[i].checked)
+            {
+                 teams += mas_input[i].value + "";
+                 counter_team++;
+            }
+            if (mas_input[i].type == 'radio' && mas_input[i].checked)
+                data += " Курс "+mas_input[i].value+"";
+          }
+          var mas_option = document.getElementsByTagName('select')[0];
+          data += " специальности "+mas_option.options[mas_option.selectedIndex].text +"";
+     
+          if (counter_team)
+            if (counter_team > 1)
+                data += " должен сдавать следующие предметы:"+teams+"";
+            else
+                data += " должен сдавать следующий предмет:"+teams+"";
+          document.getElementById("result").innerHTML = data;
+            return false;
+        }
+    </script>
+</head>
+<body>
+    <form id="f1" onsubmit="return mixtureDate()">
+        <b>ФИО: </b> <input type="text" name ="f" id ="f" value=" "size="30"/><br/><br/>
+        <b>Курс: </b><br/>
+                <input type="radio" name="r1" value="1" />1<input type="radio" name="r1" value="2"/>2<input type="radio" name="r1" value="3"/>3<input type="radio" name="r1" value="4"/>4<br/>
+        Специальность: <br/>
+            <select name="st1" size="1">
+                <option>ИСиТ</option>
+                <option>ПОИТ</option>
+                <option>ПОИБМС</option>
+                <option>ДЭиВИ</option>
+            </select><br/><br/>
+            Предметы: <br/>
+        <input type="checkbox" name="w[]" value=" ОИТ " />ОИТ
+        <input type="checkbox" name="w[]" value=" ОАиП " />ОАиП
+        <input type="checkbox" name="w[]" value=" История " />История
+        <input type="checkbox" name="w[]" value=" Физика " />Физика
+        <input type="checkbox" name="w[]" value=" Математика " />Математика<br/>
+        Ваша информация о себе<br/>
+        <textarea cols="100" rows="10" id="result"></textarea><br/><br/>
+        <input type="submit" value="Принять"/>
+        <input type="reset" value="Очистить"/> 
+        <input type="submit" value="Напечатать"/>
+    </form>
+</body>
+</html>

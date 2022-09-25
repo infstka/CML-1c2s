@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>	
+<meta charset="utf-8">
+<div class="classStyle1">
+<table class="classTable">
+<script>
+        if(navigator.javaEnabled())
+	document.write(`<tr><td>Поддержка Java в браузере:</td><td>Включена<br></td></tr>`);
+	else
+        document.write(`<tr><td>Поддержка Java в браузере:</td><td>Не включена<br></td></tr>`);
+	document.write(`<tr><td>Информация о браузере: </td><td>${navigator.userAgent}</td></tr>`);
+        document.write(`<tr><td>Версия браузера: </td><td>${navigator.appVersion}</td></tr>`);
+        document.write(`<tr><td>Название браузера: </td><td>${navigator.appName}</td></tr>`);
+        document.write(`<tr><td>Кодовое название браузера: </td><td>${navigator.appCodeName}</td></tr>`);
+        document.write(`<tr><td>Используемая ОС: </td><td>${navigator.platform}</td></tr>`);
+	document.write(`<tr><td>Ширина/высота экрана:</td><td>${screen.width}/${screen.height}</td></tr>`);
+        document.write(`<tr><td>Глубина цвета: </td><td>${screen.colorDepth}</td></tr>`);
+        document.write(`<tr><td>Посещенные URL: </td><td>${history.length}</td></tr>`);
+        document.write(`<tr><td>Текущий URL: </td><td>${location.href}</td></tr>`);
+        document.write(`<tr><td>Путь к загруженному документу: </td><td>${location.pathname}</td></tr>`);
+        document.write(`<tr><td>Имя домена загруженного документа: </td><td>${window.Location.host}</td></tr></table>`);
+</script>
+</table>
+</div>
+</head>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <svg mlns="http://www.w3.org/2000/svg" width="50%" height="50%" viewBox="0 0 50 50">
+        <defs>
+            <g id="block">
+             <rect x="1" y="1" width="10" height="10" fill="skyblue" stroke="steelblue" stroke-width="1" />
+             <circle r="1" cx="6" cy="6" fill="orangered" stroke="crimson" stroke-width="1" />
+            </g>
+            <g id="block1">
+             <rect x="1" y="1" width="5" height="5" fill="green" fill-opacity="0.5" stroke="black" stroke-width="0.1" />
+             <circle r="0.5" cx="3.5" cy="3.5" fill="white" stroke="black" stroke-width="0.1" />
+            </g>
+            <g id="block2">
+             <rect x="1" y="1" width="17" height="17" fill="yellow" stroke="black" stroke-width="0.2" />
+             <circle r="3" cx="9.5" cy="9.5" fill="black" fill-opacity="0.2" stroke="white" stroke-width="0.2" />
+             <circle r="3" cx="9.5" cy="19" fill="black" fill-opacity="0.2" stroke="white" stroke-width="0.2" />
+             <circle r="3" cx="9.5" cy="1" fill="black" fill-opacity="0.2" stroke="white" stroke-width="0.2" />
+             <circle r="3" cx="1" cy="9.5" fill="black" fill-opacity="0.2" stroke="white" stroke-width="0.2" />
+             <circle r="3" cx="18" cy="9.5" fill="black" fill-opacity="0.2" stroke="white" stroke-width="0.2" />
+            </g>
+        </defs>
+        <use href="#block" />
+        <use href="#block1" transform="translate(15 0)" />
+        <use href="#block2" transform="translate(25 5)" />
+
+    </svg>
+    <img src="2.svg"/> <!-- Задание 2.2 -->
+    <img src="1.svg" transform="translate(15 15)" /><!-- Задание 2.3 --> 
+    <img src="3.svg"/>
+</body> 
+</html>

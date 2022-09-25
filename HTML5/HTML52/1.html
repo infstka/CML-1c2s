@@ -1,0 +1,50 @@
+<html lang=en>
+<head>
+<meta charset="utf-8"/>
+    <style> 
+        #myCanvas { 
+	border:1px solid black;
+}
+    </style>
+</head>
+<body onload="init();">
+<h1>Гистограмма</h1>
+<canvas id="myCanvas" width="600" height="600">
+</canvas>
+    <script>
+        var canvas, ctx;
+function init() {
+	canvas = document.querySelector("#myCanvas"); //возвращает первый элемент документа, что соотв указанному селектору
+	ctx = canvas.getContext('2d');//возвращение контекста рисования на поле
+	var data = [5, 10, 15, 20, 25, 20, 15, 10, 5];
+	var barcolor='red'; //цвет колонн
+	drawHistogram(data, barcolor); //рисование по имеющимся данным
+}
+
+function drawHistogram(data, barcolor){
+	ctx.save(); //сохранение канваса
+
+	ctx.font = 'italic 20pt Calibri'; //установка стиля текста
+	ctx.fillStyle=barcolor;//заливка колонн
+	barwidth=40;//ширина колонн
+	barspace=10;//расстояние между колоннами
+	barunit=20;//кол-во колонн
+	
+	var posX = 0;
+	var posY = 0;
+	for (var i=0; i<data.length; i++){
+		barheight=data[i] * barunit; //определение высоты столбика
+		posX = i*barspace + i*barwidth;//относительно ох
+		posY = 600 - barheight;//относительно оу
+		ctx.fillRect(posX, posY, barwidth, barheight);//заливка 
+		ctx.save();//сохранение канваса 
+		ctx.fillStyle='black';//стиль заливки
+		ctx.fillText(data[i], posX, posY - 20);//заливка текста
+		ctx.restore();//загрузка сохраненного канваса
+	}
+
+	ctx.restore(); //загрузка
+}
+    </script>
+</body>
+</html>

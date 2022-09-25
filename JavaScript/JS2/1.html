@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+function fun1() {
+    alert('Вас приветствует учебный центр');
+}
+function fun2() {
+    var isStudent = confirm('Хотите стать Web-дизайнером?')
+    if (isStudent === true){
+        alert('Учите стили CSS и JavaScript!')
+    }
+    else{
+        alert('Упускаете время !')
+    }
+}
+function fun3() {
+    x=prompt('Введите Ваше имя:', 'Имя')
+    document.write('Добро пожаловать на наши курсы,'+ x)
+}
+
+function sum1(){
+    var x = 2 + 5
+    document.write('2 + 5 =' + x + '\n' + "<br>")
+}
+
+function sum2(){
+    var x = '2' + '5'
+    document.write("'2' + '5' ="  + x + '\n' + "<br>")
+}
+
+function sum3(){
+    var x = 22 + '5'
+    document.write("22 + '5' = " + x + '\n' + "<br>")
+}
+
+function sum4(){
+    var x = '22' + 5
+    document.write("'22' + 5 = " + x + '\n' + "<br>")
+}
+
+function sum5(){
+    document.write('Результатом сложения строки и числа всегда будет:' + typeof('225'))
+}
+
+function task2(){
+    sum1();
+    sum2();
+    sum3();
+    sum4();
+    sum5();
+}
+
+
+function task3(){
+let x = 3;
+let y = 20;
+let c = (35 * y - 25 * x) / 5 + 232; 
+document.write(c)
+let z = (8 * y / x + 5 * x / y - 43) * 6; 
+document.write( "<pre>"+z+"</\pre>")
+let a = c % z;
+document.write(a)
+alert('остаток от деления = ' +(c % z)) 
+
+}
+
+function task4(){
+    var x = prompt('Введите любое число')
+    if(x < 2 || ((x > 40) && (x != 15) && (x % 5 === 0))){
+        alert('Праваильное значение');
+    }
+    else{
+        alert ('Не правильное значение')
+    }
+}
+function task5(){
+    const a = prompt('Введите чило A')
+    const b = prompt('Введите чило B')
+    if(a > b){
+        alert('A больше B')
+    }
+    else if (b > a){
+        alert('A меньше B')
+    }
+    else alert('A и B равны')
+}
+function task6(){
+    var x = prompt('Какой сегодня день недели (по номеру)?')
+    x = parseInt(x)     //string to number
+    switch(x)   
+    {
+        case 1:alert('Сегодня понедельник'); break;
+        case 2:alert('Сегодня вторник'); break;
+        case 3:alert('Сегодня среда'); break;
+        case 4:alert('Сегодня четверг'); break;
+        case 5:alert('Сегодня пятница'); break;
+        case 6:alert('Сегодня суббота'); break;
+        case 7:alert('Сегодня воскресенье'); break;
+    }
+}
+
+
+
+function task7(){
+try {
+alert('эта функция прибавит к вашему числу 1')
+var x = prompt('Введите число') + abc //abc не определена
+} catch(err){
+ alert('Необходимо объявлять переменные!')
+ }
+}
+
+    </script>
+</head>
+<body>
+
+<input class="task1" type='button' value='Окно оповещения' onclick='fun1()'>
+<input class="task1.1" type='button' value='Окно подтверждения' onclick='fun2()'>
+<input class="taskN" type='button' value='имя' onclick='fun3()'><br>
+<input class="task2" type='button' value='Задание 2' onclick='task2()'><br>
+<input class="task3" type='button' value='Задание 3' onclick='task3()'><br>
+<input class="task4" type='button' value='Задание 4' onclick='task4()'><br>
+<input class="task5" type='button' value='Задание 5' onclick='task5()'><br>
+<input class="task6" type='button' value='Задание 6' onclick='task6()'><br>
+<input class="task7" type='button' value='Задание 7' onclick='task7()'><br>
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>

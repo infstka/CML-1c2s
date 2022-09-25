@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+</head>
+<body>
+<script>
+doIt();
+function doIt() {
+var a; // радиус окружности
+var b; // стоп-сигнал
+var leng_of_circle; // длина окружности
+var area_of_circle; // площадь 
+a = +prompt("Введите a: "); // Ввод с преобразованием в число
+if (isNaN(a)) {
+alert("Строка преобразовалась в NaN. Не число");
+return;
+}
+b = +prompt("Введите b: "); // Ввод с преобразованием в число
+if (isNaN(b)) {
+alert("Строка преобразовалась в NaN. Не число");
+return;
+}
+var s = '<table border="3px" width="600px" align="center" cellspacing="4px" cellpadding="2px" bgcolor="white"> <tr><td bgcolor="gray">Радиус</td> <td bgcolor="gray">Длина окружности</td> <td bgcolor="gray">Площадь окружности</td> </tr>';
+do {
+// создаём новую строку в таблице, и в неё добавляем ячейки
+leng_of_circle = Math.round(2 * 3.14 * a);
+area_of_circle = Math.round(3.14 * a * a);
+s += "<tr><td>" + a.toFixed(1) + "</td><td>" + leng_of_circle + "</td><td>" + area_of_circle + "</td></tr>";
+a = a + 0.3; // счётчик
+}
+while (a <= b);
+document.write(s + "</table>");
+}
+</script>
+</body>
+</html>

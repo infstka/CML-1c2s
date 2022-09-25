@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+</head>
+<body>
+  <img id="square" src="1.jpg" style="width:200px;height: 200px; position:relative;"> <!-- присоед изображ-->
+  <script>
+  function move() {
+      let start = Date.now(); //начало функции
+      let timer = setInterval(function () { //установка интервала 
+        let timePassed = Date.now() - start; //начало функции - старт
+        square.style.left = timePassed / 5 + 'px'; //интервал "прыжков" по ох
+        square.style.marginTop = 500 * Math.sin(timePassed * 0.01) / 5 + 'px'; //то же самое, но по оу
+        if (timePassed >5000) { 
+          clearInterval(timer);
+          square.style.left = 0 //при достижении 5000 пикселей изображение идет в исходное состояние
+        }
+      }, 20);
+    }
+    move();
+  </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+.menu-item{
+
+    text-align: center;
+    width: 70px;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    background-color: green;
+    }
+    .menu-item .submenu{
+    display: inline-block;
+    height: 20px;
+    width: 70px;
+    background: green;
+    position: absolute;
+    cursor: pointer;
+    }
+    div.menu-item:hover{
+    animation: col 1.5s forwards;
+    }
+    div.submenu:hover{
+    animation: loc 1s forwards;
+    }
+    @keyframes col{
+    0%{
+    text-align: center;
+    background-color: green;
+    }
+ 

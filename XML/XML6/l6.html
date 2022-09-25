@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="1000px" height="500px">
+<defs>
+<linearGradient id="myGradient">
+<stop offset="35%" stop-color="red" />
+<stop offset="65%" stop-color="orange" />
+</linearGradient>
+</defs>
+<polygon points="375,135 515,5 555,175" fill="white" stroke="black" stroke-width="5" />;
+<rect x="120" rx="15" y="65" width="300" height="300" fill="gray" stroke-width="5" stroke="yellow"></rect>
+<circle r="65" cx="220" cy="200" fill="blue" fill-opacity="0.2" stroke="red" stroke-width="3">
+</circle>
+<ellipse rx="110" ry="30" cx="185" cy="120" fill="red" stroke="orange" stroke-width="5" transform="rotate(-23 135 70)" />
+<rect x="550" y="250" width="200" height="180" fill="url(#myGradient)" stroke="green" stroke-width="5"></rect>
+</svg>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="1300" height="900">
+<style>
+.col-1 {
+fill: red;
+stroke: black;
+stroke-width: 5;
+}
+.col-2 {
+fill: yellow;
+stroke: black;
+stroke-width: 5;
+}
+.col-3 {
+fill: url(#myGradient);
+stroke: black;
+stroke-width: 5;
+}
+.col-4 {
+fill: blue;
+stroke: black;
+stroke-width: 5;
+}
+.col-5 {
+fill: green;
+stroke: black;
+stroke-width: 5;
+}
+</style>
+<defs>
+<path id="gear" d="M230 80
+           A 45 45, 0, 1, 0, 275 125
+           L 275 80 Z"/>
+</defs>
+<use xlink: href=" #gear" class="col-1" x="20" y="10" transform="scale(1.2 1.6)" />
+<use xlink: href=" #gear" class="col-2" x="120" y="10" transform="rotate(23 150 10)" />
+<use xlink: href=" #gear" class="col-3" x="220" y="10" />
+<use xlink: href=" #gear" class="col-4" x="320" y="10" transform="skewY(30)" />
+<use xlink: href=" #gear" class="col-5" x="420" y="10" transform="skewX(-30)" />
+</svg>
+</body>
+</html>
